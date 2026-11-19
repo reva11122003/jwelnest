@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JewelNest | About Us</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #faf6ef;
+    color: #49372d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+
+header {
+    background: #fffaf3;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(80,50,30,0.08);
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #a77b4c;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #654b3b;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b48a55;
+}
+
+/* ABOUT HERO */
+
+.about-hero {
+    background: #eee1d0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 65px 9%;
+    gap: 45px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.small-title {
+    color: #a77b4c;
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.about-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 65px;
+    line-height: 1.1;
+    color: #63432f;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #765d4b;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.about-hero img {
+    width: 45%;
+    height: 470px;
+    object-fit: cover;
+}
+
+/* OUR STORY */
+
+.story {
+    padding: 85px 12%;
+    text-align: center;
+}
+
+.story h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    color: #704c34;
+    margin-bottom: 20px;
+}
+
+.story p {
+    max-width: 850px;
+    margin: auto;
+    color: #806c5a;
+    font-size: 14px;
+    line-height: 2.1;
+}
+
+/* VALUES */
+
+.values {
+    background: #f0e5d8;
+    padding: 70px 8%;
+}
+
+.values-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.values-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    color: #704c34;
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    background: #fffaf4;
+    text-align: center;
+    padding: 40px 25px;
+    transition: 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+}
+
+.value-card .symbol {
+    font-size: 35px;
+    color: #b48a55;
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    color: #795536;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    font-size: 13px;
+    color: #8b7767;
+    line-height: 1.9;
+}
+
+/* WHY CHOOSE US */
+
+.choose {
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    gap: 55px;
+}
+
+.choose img {
+    width: 45%;
+    height: 440px;
+    object-fit: cover;
+}
+
+.choose-content {
+    flex: 1;
+}
+
+.choose-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    color: #704c34;
+    margin-bottom: 20px;
+}
+
+.choose-content p {
+    font-size: 14px;
+    color: #806c5a;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.choose-content ul {
+    list-style: none;
+}
+
+.choose-content li {
+    font-size: 14px;
+    color: #795536;
+    margin-bottom: 15px;
+}
+
+.choose-content li::before {
+    content: "✦ ";
+    color: #b48a55;
+}
+
+/* QUOTE */
+
+.quote {
+    background: #dfcbb5;
+    padding: 70px 12%;
+    text-align: center;
+}
+
+.quote h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 43px;
+    color: #63432f;
+    margin-bottom: 15px;
+}
+
+.quote p {
+    color: #765d4b;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* FOOTER */
+
+footer {
+    background: #604637;
+    color: #f8eee2;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+footer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #e2cdb7;
+    line-height: 2;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+footer a {
+    color: #f8eee2;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .about-hero,
+    .choose {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text h1 {
+        font-size: 48px;
+    }
+
+    .about-hero img,
+    .choose img {
+        width: 100%;
+    }
+
+    .values-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <div class="logo">JewelNest.</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="order.html">Orders</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+</header>
+
+<!-- ABOUT HERO -->
+
+<section class="about-hero">
+
+    <div class="about-text">
+
+        <div class="small-title">OUR STORY & HERITAGE</div>
+
+        <h1>Tradition Woven With Elegance</h1>
+
+        <p>
+            Welcome to JewelNest, where the beauty of Indian
+            jewellery meets timeless elegance. We believe that
+            every piece of jewellery tells a beautiful story
+            of tradition, love and individuality.
+        </p>
+
+        <br>
+
+        <p>
+            Our collection celebrates the richness of Indian
+            culture through graceful designs and stunning
+            jewellery creations.
+        </p>
+
+    </div>
+
+    <img
+    src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1000"
+    alt="Indian woman wearing traditional attire">
+
+</section>
+
+<!-- OUR STORY -->
+
+<section class="story">
+
+    <h2>The Heart Behind JewelNest</h2>
+
+    <p>
+        JewelNest was created with a passion for celebrating
+        the timeless beauty of Indian jewellery. From
+        traditional gold-inspired designs to elegant
+        contemporary pieces, our aim is to bring beauty
+        and confidence to every woman.
+
+        <br><br>
+
+        We believe jewellery is not just an ornament.
+        It is a memory, an emotion and a reflection
+        of your personality. Every design is inspired
+        by the elegance of Indian traditions and
+        the charm of modern fashion.
+    </p>
+
+</section>
+
+<!-- OUR VALUES -->
+
+<section class="values">
+
+    <div class="values-title">
+        <h2>What Makes Us Special</h2>
+    </div>
+
+    <div class="values-container">
+
+        <div class="value-card">
+
+            <div class="symbol">✧</div>
+
+            <h3>Timeless Designs</h3>
+
+            <p>
+                Jewellery inspired by Indian heritage
+                that remains beautiful across generations.
+            </p>
+
+        </div>
+
+        <div class="value-card">
+
+            <div class="symbol">♡</div>
+
+            <h3>Beauty & Elegance</h3>
+
+            <p>
+                Carefully selected designs that celebrate
+                every woman's individual beauty and style.
+            </p>
+
+        </div>
+
+        <div class="value-card">
+
+            <div class="symbol">✦</div>
+
+            <h3>Special Moments</h3>
+
+            <p>
+                Beautiful collections for weddings,
+                festivals, celebrations and everyday memories.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="choose">
+
+    <img
+    src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900"
+    alt="Beautiful traditional jewellery">
+
+    <div class="choose-content">
+
+        <h2>Why Choose JewelNest?</h2>
+
+        <p>
+            We bring together traditional inspiration
+            and modern elegance to make every jewellery
+            experience special.
+        </p>
+
+        <ul>
+
+            <li>Elegant Indian-inspired jewellery designs</li>
+
+            <li>Collections for every special occasion</li>
+
+            <li>Beautiful styles for modern women</li>
+
+            <li>Timeless designs with cultural inspiration</li>
+
+            <li>Jewellery that complements your personality</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- CLOSING BANNER -->
+
+<section class="quote">
+
+    <h2>Every Jewel Has A Story</h2>
+
+    <p>
+        Let your beauty shine, celebrate your traditions
+        and create unforgettable memories with JewelNest.
+        Because you deserve something truly special.
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>JewelNest</h2>
+
+    <p>Where Tradition Meets Timeless Elegance</p>
+
+    <div class="footer-links">
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="order.html">Orders</a>
+        <a href="contact.html">Contact Us</a>
+
+    </div>
+
+    <p>© 2026 JewelNest. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
+

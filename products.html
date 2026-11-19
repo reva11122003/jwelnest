@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JewelNest | Our Collections</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #faf6ef;
+    color: #49372d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+
+header {
+    background: #fffaf3;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(80,50,30,0.08);
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #a77b4c;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #654b3b;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b48a55;
+}
+
+/* PAGE BANNER */
+
+.page-banner {
+    background: #eee1d0;
+    text-align: center;
+    padding: 75px 15px;
+}
+
+.page-banner .small-title {
+    color: #a77b4c;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.page-banner h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    color: #63432f;
+    margin: 12px 0;
+}
+
+.page-banner p {
+    color: #806c5a;
+    font-size: 14px;
+}
+
+/* SECTION TITLE */
+
+.section-title {
+    text-align: center;
+    padding: 55px 15px 35px;
+}
+
+.section-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #704c34;
+}
+
+.section-title p {
+    color: #927c69;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* FILTER BUTTONS */
+
+.filters {
+    text-align: center;
+    margin: 10px 0 35px;
+    padding: 0 10px;
+}
+
+.filters button {
+    background: transparent;
+    border: 1px solid #b48a55;
+    color: #795536;
+    padding: 10px 22px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.filters button:hover,
+.filters button.active {
+    background: #98704b;
+    color: white;
+}
+
+/* PRODUCT GRID */
+
+.products {
+    padding: 0 8% 75px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: #fffaf4;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(70,40,20,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    color: #795536;
+    margin: 15px 0 8px;
+}
+
+.product-card p {
+    color: #8b7767;
+    font-size: 12px;
+    line-height: 1.8;
+    padding: 0 18px;
+}
+
+.price {
+    display: block;
+    color: #a77b4c;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.product-card a {
+    display: inline-block;
+    background: #98704b;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin-top: 15px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.product-card a:hover {
+    background: #63432f;
+}
+
+/* BENEFITS */
+
+.benefits {
+    background: #f0e5d8;
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #704c34;
+    margin-bottom: 30px;
+}
+
+.benefit-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.benefit-box {
+    background: #fffaf4;
+    padding: 30px 20px;
+}
+
+.benefit-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #795536;
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+.benefit-box p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #8b7767;
+}
+
+.symbol {
+    font-size: 30px;
+    color: #b48a55;
+}
+
+/* FOOTER */
+
+footer {
+    background: #604637;
+    color: #f8eee2;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+footer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #e2cdb7;
+    line-height: 2;
+}
+
+footer a {
+    color: #f8eee2;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .products,
+    .benefit-container {
+        grid-template-columns: 1fr;
+    }
+
+    .page-banner h1 {
+        font-size: 45px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <div class="logo">JewelNest.</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="order.html">Orders</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+</header>
+
+<!-- PAGE BANNER -->
+
+<section class="page-banner">
+
+    <div class="small-title">DISCOVER OUR BEAUTIFUL COLLECTION</div>
+
+    <h1>Our Jewellery Collection</h1>
+
+    <p>
+        Discover elegance, tradition and beauty in every jewel.
+    </p>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="section-title">
+
+    <h2>Explore Our Treasures</h2>
+
+    <p>Beautiful designs inspired by Indian culture and tradition.</p>
+
+</section>
+
+<!-- FILTER BUTTONS -->
+
+<div class="filters">
+
+    <button class="active" onclick="filterProducts('all',this)">All Jewellery</button>
+
+    <button onclick="filterProducts('necklace',this)">Necklaces</button>
+
+    <button onclick="filterProducts('earrings',this)">Earrings</button>
+
+    <button onclick="filterProducts('bangles',this)">Bangles</button>
+
+    <button onclick="filterProducts('rings',this)">Rings</button>
+
+</div>
+
+<!-- PRODUCT COLLECTION -->
+
+<section class="products">
+
+    <!-- 1 -->
+
+    <div class="product-card" data-category="necklace">
+
+        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=700" alt="Royal gold necklace">
+
+        <h3>Royal Gold Necklace</h3>
+
+        <p>
+            A traditional royal-inspired necklace that adds
+            elegance to weddings and festive occasions.
+        </p>
+
+        <span class="price">₹2,499</span>
+
+        <a href="order.html">Order Now</a>
+
+    </div>
+
+    <!-- 2 -->
+
+    <div class="product-card" data-category="earrings">
+
+        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=700" alt="Elegant earrings">
+
+        <h3>Elegant Earrings</h3>
+
+        <p>
+            Graceful earrings designed to complement
+            traditional outfits and modern fashion.
+        </p>
+
+        <span class="price">₹899</span>
+
+        <a href="order.html">Order Now</a>
+
+    </div>
+
+    <!-- 3 -->
+
+    <div class="product-card" data-category="bangles">
+
+        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=700" alt="Classic bangles">
+
+        <h3>Classic Bangles</h3>
+
+        <p>
+            Beautiful traditional-inspired bangles
+            perfect for celebrations and special moments.
+        </p>
+
+        <span class="price">₹1,499</span>
+
+        <a href="order.html">Order Now</a>
+
+    </div>
+
+    <!-- 4 -->
+
+    <div class="product-card" data-category="rings">
+
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=700" alt="Elegant ring">
+
+        <h3>Diamond Style Ring</h3>
+
+        <p>
+            A delicate and elegant ring that adds
+            a sparkling touch to your everyday look.
+        </p>
+
+        <span class="price">₹1,199</span>
+
+        <a href="order.html">Order Now</a>
+
+    </div>
+
+    <!-- 5 -->
+
+    <div class="product-card" data-category="necklace">
+
+        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=700" alt="Designer necklace">
+
+        <h3>Traditional Pendant</h3>
+
+        <p>
+            A graceful pendant design that combines
+            simplicity with traditional beauty.
+        </p>
+
+        <span class="price">₹1,799</span>
+
+        <a href="order.html">Order Now</a>
+
+    </div>
+
+    <!-- 6 -->
+
+    <div class="product-card" data-category="earrings">
+
+        <img src="https://images.unsplash.com/photo-1635767798638-3665a7c9e2b4?w=700" alt="Designer earrings">
+
+        <h3>Floral Earrings</h3>
+
+        <p>
+            Inspired by delicate floral patterns,
+            perfect for a charming feminine look.
+        </p>
+
+        <span class="price">₹749</span>
+
+        <a href="order.html">Order Now</a>
+
+    </div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+    <h2>Why Love Our Collection?</h2>
+
+    <div class="benefit-container">
+
+        <div class="benefit-box">
+
+            <div class="symbol">✧</div>
+
+            <h3>Timeless Beauty</h3>
+
+            <p>
+                Elegant jewellery styles inspired by
+                Indian heritage and modern fashion.
+            </p>
+
+        </div>
+
+        <div class="benefit-box">
+
+            <div class="symbol">♡</div>
+
+            <h3>Perfect for Every Occasion</h3>
+
+            <p>
+                Beautiful designs for weddings,
+                festivals, parties and daily wear.
+            </p>
+
+        </div>
+
+        <div class="benefit-box">
+
+            <div class="symbol">✦</div>
+
+            <h3>Elegant Styling</h3>
+
+            <p>
+                Find jewellery that complements your
+                outfits and expresses your personality.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>JewelNest</h2>
+
+    <p>Where Tradition Meets Timeless Elegance</p>
+
+    <br>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="order.html">Orders</a>
+    <a href="contact.html">Contact Us</a>
+
+    <br><br>
+
+    <p>© 2026 JewelNest. All Rights Reserved.</p>
+
+</footer>
+
+<!-- PRODUCT FILTER SCRIPT -->
+
+<script>
+
+function filterProducts(category, button) {
+
+    let products = document.querySelectorAll(".product-card");
+
+    let buttons = document.querySelectorAll(".filters button");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+    products.forEach(product => {
+
+        if(category === "all" ||
+           product.dataset.category === category) {
+
+            product.style.display = "block";
+
+        } else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

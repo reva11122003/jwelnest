@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JewelNest | Indian Luxury Jewellery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f3eb;
+    color: #49372d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+
+header {
+    background: #fffaf3;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(80,50,30,0.06);
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: #9b7045;
+    letter-spacing: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #654b3b;
+    margin-left: 30px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #bd925c;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 9%;
+    background: #eee1d0;
+    gap: 35px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 65px;
+    line-height: 1.1;
+    color: #63432f;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #765d4b;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #98704b;
+    color: white;
+    padding: 13px 32px;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #67452f;
+}
+
+.hero img {
+    width: 48%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* SECTION TITLE */
+
+.section-title {
+    text-align: center;
+    padding: 65px 15px 35px;
+}
+
+.section-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 43px;
+    color: #704c34;
+}
+
+.section-title p {
+    color: #927c69;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* PRODUCTS */
+
+.products {
+    padding: 10px 8% 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: #fffaf4;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(70,40,20,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    color: #795536;
+    margin: 18px 0 8px;
+}
+
+.product-card p {
+    color: #8b7767;
+    font-size: 13px;
+    padding: 0 20px;
+    line-height: 1.8;
+}
+
+.product-card a {
+    display: inline-block;
+    margin-top: 18px;
+    text-decoration: none;
+    color: #98704b;
+    border-bottom: 1px solid #98704b;
+    font-size: 13px;
+}
+
+/* COLLECTION BANNER */
+
+.banner {
+    background: #dfcbb5;
+    padding: 65px 10%;
+    text-align: center;
+}
+
+.banner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    color: #63432f;
+}
+
+.banner p {
+    margin: 15px auto 25px;
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #765d4b;
+}
+
+/* FOOTER */
+
+footer {
+    background: #604637;
+    color: #f8eee2;
+    padding: 35px 10%;
+    text-align: center;
+}
+
+footer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #e2cdb7;
+    line-height: 2;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 350px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <div class="logo">JewelNest.</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="order.html">Orders</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Elegance in Every Indian Tradition</h1>
+
+        <p>
+            Discover the beauty of timeless Indian jewellery.
+            From graceful gold necklaces to sparkling earrings,
+            every piece at JewelNest celebrates your unique elegance.
+        </p>
+
+        <a href="products.html" class="btn">EXPLORE COLLECTION</a>
+
+    </div>
+
+    <img
+    src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=900"
+    alt="Indian woman in traditional attire">
+
+</section>
+
+<!-- COLLECTIONS -->
+
+<div class="section-title">
+
+    <h2>Our Signature Collections</h2>
+
+    <p>Beautiful jewellery crafted to celebrate every moment.</p>
+
+</div>
+
+<section class="products">
+
+    <!-- PRODUCT 1 -->
+
+    <div class="product-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=700"
+        alt="Traditional gold jewellery">
+
+        <h3>Royal Gold Necklace</h3>
+
+        <p>
+            A timeless traditional design that adds royal charm
+            to weddings, festivals and special occasions.
+        </p>
+
+        <a href="products.html">Discover More →</a>
+
+    </div>
+
+    <!-- PRODUCT 2 -->
+
+    <div class="product-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=700"
+        alt="Elegant gold earrings">
+
+        <h3>Elegant Earrings</h3>
+
+        <p>
+            Lightweight and graceful designs that enhance
+            your everyday beauty and traditional style.
+        </p>
+
+        <a href="products.html">Discover More →</a>
+
+    </div>
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product-card">
+
+        <img
+        src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=700"
+        alt="Indian jewellery bangles">
+
+        <h3>Classic Bangles</h3>
+
+        <p>
+            Inspired by Indian heritage, these beautiful
+            bangles bring festive charm and timeless elegance.
+        </p>
+
+        <a href="products.html">Discover More →</a>
+
+    </div>
+
+</section>
+
+<!-- BRAND STORY -->
+
+<section class="banner">
+
+    <h2>Beauty That Tells Your Story</h2>
+
+    <p>
+        At JewelNest, every ornament is more than an accessory.
+        It represents tradition, confidence and individuality.
+        Celebrate your precious moments with jewellery that
+        stays beautiful through generations.
+    </p>
+
+    <a href="about.html" class="btn">OUR STORY</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>JewelNest</h2>
+
+    <p>
+        Where Tradition Meets Timeless Elegance
+        <br>
+        © 2026 JewelNest. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
